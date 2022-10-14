@@ -1,0 +1,52 @@
+$black: #000;
+$white: #fff;
+$grey-darker: #383E56;
+$grey-dark: #333;
+$grey: #999;
+$grey-light: #ccc;
+$grey-lighter: #F7FAFF;
+$gold: #ac955f;
+$blue: #337AFF;
+$default-text: #aaa;
+$text: #606A80;
+
+//主题色
+$primary: #1480F5; //teal
+$primary-background: rgba(250, 235, 237, 1);
+
+$success: #6FBF39;
+$error: #FA5961;
+$warning: #E69B22;
+$disabled: #F5F5F5;
+$gray: #E6E6E6;
+$primary-hover: rgba(61, 109, 204, .95);
+$success-hover: rgba(111, 191, 57, 0.95);
+$error-hover: rgba(250, 89, 97, 0.95);
+$warning-hover: rgba(230, 155, 34, 0.95);
+$bg: #EDF2F7;
+$bg-menu: #333747;
+
+
+//渐变色
+$gradient-primary: #4E8CFF, #2E77FF;
+
+//覆盖ele
+$--color-warning: #EB681C !default;
+$--color-info: #94969C !default;
+//调整tooltip_白色css
+.el-tooltip__popper.is-light {
+  border: 0 !important;
+  box-shadow: 0px 1px 3px 1px #DBDBDB;
+}
+
+.el-tooltip__popper.is-light[x-placement^="top"] .popper__arrow {
+  border-top-color: #FFFFFF;
+}
+
+.el-tooltip__popper.is-light[x-placement^="bottom"] .popper__arrow {
+  border-bottom-color: #FFFFFF;
+}
+
+.el-textarea__inner {
+  font-family: Source Han Sans SC;
+}

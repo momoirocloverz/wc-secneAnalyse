@@ -1,0 +1,13 @@
+// Create border
+@function border($width: 1px, $color: $primary) {
+  @return $width solid $color;
+}
+@function colorGrey($grade:1,$color:$grey) {
+  @if($grade == 1){
+    // #666
+    @return mix($color,#333);
+  }@else if($grade == 2) {
+    // #aaa
+    @return mix($color,#bbb);
+  }
+}

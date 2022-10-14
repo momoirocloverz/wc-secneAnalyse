@@ -1,0 +1,33 @@
+//文字渐变
+//左右
+@mixin text-gradient($color1: #4E8CFF, $color2: #2E77FF) {
+  background-image: -webkit-linear-gradient(left, $color1, $color2);
+  -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+  -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+  color: $color2;
+}
+//上下
+@mixin text-gradient-tb($color1: #4E8CFF, $color2: #2E77FF) {
+  background-image: -webkit-linear-gradient(top, $color1, $color2);
+  -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+  -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+  color: $color2;
+}
+
+//背景渐变
+//左右
+@mixin gradient-color($color1: #4E8CFF, $color2: #2E77FF) {
+  background: $color2;
+  background: -webkit-linear-gradient(left, $color1, $color2); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, $color1, $color2); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, $color1, $color2); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, $color1, $color2); /* 标准的语法 */
+}
+//上下
+@mixin gradient-color-tb($color1: #00B386, $color2: #008D6A) {
+  background: $color2;
+  background: -webkit-linear-gradient(top, $color1, $color2); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom, $color1, $color2); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom, $color1, $color2); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom, $color1, $color2); /* 标准的语法 */
+}

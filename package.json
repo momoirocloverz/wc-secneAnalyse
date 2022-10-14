@@ -1,0 +1,101 @@
+{
+  "name": "wc-scene-analysis-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "文成农业场景分析",
+  "author": "PhysicalPoint",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:pst": "vue-cli-service build  --mode=pst",
+    "auto-apis": "node ./node_modules/auto-apis/bin/auto-apis-init.js"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.8",
+    "animate.css": "3.7.2",
+    "animated-number-vue": "^1.0.0",
+    "auto-apis": "http://gitlab.physicalpoint.com/web-common/auto-apis.git",
+    "axios": "0.18.1",
+    "bpmn-js": "^8.7.3",
+    "camunda-bpmn-moddle": "^6.0.0",
+    "core-js": "^3.4.3",
+    "echarts": "5.0.0",
+    "echarts-wordcloud": "^1.1.3",
+    "element-ui": "^2.4.5",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "nprogress": "^0.2.0",
+    "pp-js-util": "http://gitlab.physicalpoint.com/web-common/pp-js-util.git",
+    "pp-product-verify": "http://gitlab.physicalpoint.com/sso-common/pp-product-verify.git",
+    "pp-vue-components": "http://gitlab.physicalpoint.com/web-common/pp-vue-components.git",
+    "print-js": "^1.6.0",
+    "promise.prototype.finally": "^3.1.2",
+    "proxy-polyfill": "^0.3.2",
+    "qs": "^6.9.1",
+    "sso2-access-util": "http://gitlab.physicalpoint.com/sso-common/sso2-access-util.git",
+    "tiny-cookie": "^2.3.2",
+    "ts-optchain": "^0.1.8",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-one-size": "^0.0.5",
+    "vue-property-decorator": "^8.3.0",
+    "vue-router": "^3.1.3",
+    "vue-seamless-scroll": "^1.1.23",
+    "vue-tsx-support": "^2.3.0",
+    "vuex": "^3.1.2",
+    "vuex-class": "^0.3.2",
+    "vuex-module-decorators": "^0.11.0",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/echarts": "^4.9.0",
+    "@types/lodash": "^4.14.149",
+    "@types/nprogress": "^0.2.0",
+    "@types/qs": "^6.9.0",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-typescript": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "babel-plugin-ts-optchain": "^1.1.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "iconv-lite": "^0.5.1",
+    "node-loader": "^0.6.0",
+    "node-sass": "^4.14.1",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "pp-ts-types": "http://gitlab.physicalpoint.com/web-common/pp-ts-types.git",
+    "sass-loader": "^8.0.0",
+    "typescript": "~3.5.3",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-cli-plugin-scss-base": "^0.2.2",
+    "vue-cli-plugin-tsx-support": "^0.4.1",
+    "vue-jsx-hot-loader": "^1.4.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/typescript"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie < 11"
+  ],
+  "homepage": "http://www.physicalpoint.com/"
+}

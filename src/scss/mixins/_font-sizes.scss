@@ -1,0 +1,68 @@
+@mixin text-small() {
+  font-size: 12px;
+  line-height: 1.25;
+
+  @include breakpoint($medium) {
+    line-height: 1.375;
+  }
+}
+
+@mixin text-medium() {
+  font-size: 16px;
+  line-height: 1.25;
+
+  @include breakpoint($medium) {
+    line-height: 1.375;
+  }
+}
+
+@mixin heading-small() {
+  font-size: 18px;
+  line-height: 1.1;
+
+  @include breakpoint($medium) {
+    line-height: 1.22;
+  }
+}
+
+@mixin heading-medium() {
+  font-size: 22px;
+  line-height: 1.13636364;
+
+  @include breakpoint($medium) {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 28px;
+  }
+}
+
+@mixin heading-large() {
+  font-size: 26px;
+  line-height: 1.15384615;
+
+  @include breakpoint($medium) {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 36px;
+  }
+}
+
+@mixin heading-x-large() {
+  font-size: 32px;
+  line-height: 1.25;
+
+  @include breakpoint($medium) {
+    font-size: 40px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 48px;
+    line-height: 1.05;
+  }
+}

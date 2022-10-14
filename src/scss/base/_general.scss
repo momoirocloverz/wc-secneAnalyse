@@ -1,0 +1,427 @@
+html {
+  box-sizing: border-box;
+  //font-size: 10px;
+  //设置为百分比(相对于浏览器默认字体大小)可能因为浏览器默认字体大小调整导致页面整体被放大,直接在html标签上加大小锁定比例
+  //font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+
+  //todo 通过媒体查询改表font-size的大小来适配各个屏幕比例
+}
+
+
+body {
+  color: $primary-font-color;
+  font-family: $primary-font;
+  font-size: 16px;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+
+  ::selection {
+    background: $primary-font-color;
+    color: $white;
+    text-shadow: none;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+blockquote,
+figure {
+  margin: 0;
+}
+
+blockquote {
+  .quote {
+    quotes: '“''”''‘''’';
+
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
+}
+
+//滚动条
+.el-main, .menuList, .el-tabs__content {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #C4C7CC;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(196, 199, 204, .8);
+  }
+
+}
+
+//清除浮动
+.clear {
+  zoom: 1;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+//进度条默认背景色
+.el-progress-bar__outer {
+  background: rgba(228, 232, 240, 1);
+}
+.el-popover{
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+//黑色主题
+.el-popover.black {
+  background: rgba(0, 0, 0, .65);
+  padding: 10px;
+
+  .popper__arrow {
+    display: none;
+  }
+
+  .app-item-hover-panel {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    // width: 27rem;
+    color: rgba(255, 255, 255, 1);
+
+    &-row {
+      display: flex;
+      margin-bottom: 5px;
+
+      &-pack {
+        color: rgba(249, 163, 24, 1)
+      }
+
+      &-value {
+
+        &.up,
+        &.down {
+          margin-right: 5px;
+        }
+
+        &.up {
+          color: rgba(230, 60, 60, 1)
+        }
+
+        &.down {
+          color: rgba(50, 191, 25, 1)
+        }
+
+        &.a {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.btn-custom-cancel {
+  float: right;
+  margin-left: 10px;
+}
+
+
+//隐藏级联菜单单选按钮
+// .el-cascader-panel .el-radio {
+//   width: 100%;
+//   height: 100%;
+//   z-index: 10;
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+// }
+
+// .el-cascader-panel .el-radio__input {
+//   visibility: hidden;
+// }
+
+// .el-cascader-panel .el-cascader-node__postfix {
+//   top: 10px;
+// }
+
+//操作按钮
+.handleBtn {
+  width: 100%;
+  color: $primary;
+
+  span {
+    margin-right: 5px;
+    cursor: pointer;
+    background: rgba(20, 128, 245, 0.1);
+    color: #1480F5;
+    padding: 3px 4px;
+  }
+
+  .del {
+    color: #E84646;
+    background: rgba(232, 70, 70, 0.1);
+  }
+}
+
+//图表左边app图表样式
+.icon-app {
+  font-size: 13px;
+}
+
+
+//tab覆盖
+.el-tabs {
+  background: rgba(255, 255, 255, 1);
+
+  .el-tabs__active-bar {
+    height: 3px;
+  }
+
+  .el-tabs__header {
+    margin-bottom: 0;
+  }
+
+  .el-tabs__nav.is-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .el-tabs__nav-wrap {
+    .el-tabs__item {
+      padding: 0;
+      flex: 1;
+      border-right: 1px solid #D9D9D9;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+    }
+
+    .el-tabs__item:last-child {
+      border: none;
+    }
+  }
+
+  .el-tabs__nav-wrap::after {
+    height: 1px;
+    background-color: #D9D9D9;
+  }
+
+  .el-tabs__content {
+    //padding: 20px;
+  }
+}
+
+.el-form-item__content {
+  line-height: 0;
+}
+
+//日期选择器
+.el-date-editor {
+  .el-icon-date,
+  .el-input__prefix {
+    //width: 20px;
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    left: unset !important;
+  }
+
+  .el-range__close-icon {
+    margin-right: 5px;
+    line-height: 30px;
+  }
+
+  .el-input__inner {
+    padding-left: 15px !important;
+  }
+
+  //固定分隔符宽度
+  .el-range-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+  }
+}
+
+
+//input
+input::placeholder {
+  font-size: 13px;
+  color: rgba(60, 66, 77, .5);
+}
+
+
+//排序生效时文字变成主题色
+.el-table__header-wrapper,
+.el-table__fixed-header-wrapper {
+  //覆盖表头样式,自定义的表头填充满整个空间方便定制
+  thead th {
+
+    //排序生效时文字变成主题色
+    &.ascending,
+    &.descending {
+      > .cell {
+        // >div {
+        color: $primary;
+        // }
+      }
+    }
+  }
+}
+
+//应用主颜色的文字,为动态计算的元素提供使用主题色的功能
+.primary-text-color {
+  color: $primary;
+}
+
+//修改switch内嵌文字
+.innerTextSwitch {
+  .el-switch__label {
+    position: absolute;
+    display: none;
+    color: #ffffff;
+  }
+
+  .el-switch__label--left {
+    z-index: 9;
+    top: 0;
+    left: 20px;
+  }
+
+  .el-switch__label--right {
+    z-index: 9;
+    left: 2px;
+    top: 0
+  }
+
+  .el-switch__label.is-active {
+    display: block;
+  }
+
+  .el-switch__core {
+    width: 60px !important;
+  }
+}
+
+//时间选择器宽度
+/* 日期选择框的宽度 */
+.el-date-editor.el-input, .el-date-editor.el-input__inner {
+  width: 202px;
+  height: 36px;
+}
+
+//排序按钮背景色
+.caret-wrapper {
+  background: #F0F1F5 !important;
+}
+
+//解决列表多选首个错位问题
+//.el-table__header-wrapper thead th:first-child > .cell{
+//  padding:0 14px !important;
+//}
+.el-table th:first-child.is-leaf {
+  background: #F0F1F5;
+}
+
+.el-switch.is-disabled .el-switch__label {
+  cursor: pointer;
+}
+
+//按钮disabled后的默认样式
+button.is-disabled:hover {
+  background: #979FB0 !important;
+  border-color: #979FB0 !important;
+}
+
+//解决时间搜索显示不全问题
+.chooseTime {
+  width: 220px !important;
+  vertical-align: baseline !important;
+
+  &.secondTime {
+    width: 361px !important;
+    vertical-align: baseline !important;
+  }
+}
+
+//级联下拉框默认样式
+.cascader {
+  width: 200px;
+}
+
+//提示框宽度
+.el-tooltip__popper {
+  font-size: 14px;
+  max-width: 50%;
+  color: #505050;
+}
+
+//textarea
+.el-textarea .el-input__count {
+  bottom: 12px;
+}
